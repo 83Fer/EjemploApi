@@ -1,0 +1,283 @@
+@charset "UTF-8";
+		@import 'https://fonts.googleapis.com/css?family=Raleway';
+		body {
+			font-family: 'Raleway', sans-serif;
+			font-weight: 300;
+			line-height: 1.42em;
+			color:#4B4A4B;
+			background-color:#FFDAC4;
+			background: url(http://www.pixeden.com/media/k2/galleries/131/002-subtle-light-pattern-background-texture.jpg);
+		}
+
+		h1 {
+			font-size:3em; 
+			font-weight: 300;
+			line-height:1em;
+			text-align: center;
+			color: #FD2E4A;
+		}
+
+		.listado th h1 {
+			font-weight: bold;
+			font-size: 1em;
+			text-align: left;
+		  	color: #FFFFFF;
+		}
+
+		.listado td {
+			font-weight: normal;
+			font-size: 1em;
+			-webkit-box-shadow: 0 2px 2px -2px #0E1119;
+			-moz-box-shadow: 0 2px 2px -2px #0E1119;
+			box-shadow: 0 2px 2px -2px #0E1119;
+		}
+
+		.listado {
+			text-align: left;
+			overflow: hidden;
+			width: 85%;
+			margin: 0 auto;
+			display: table;
+			padding: 0 0 8em 0;
+		}
+
+		.listado td, .listado th {
+			padding-bottom: 2%;
+			padding-top: 2%;
+			padding-left:2%;  
+		}
+
+		.listado tr:nth-child(odd) {
+			background-color: #EEEAE7;
+		}
+
+		.listado tr:nth-child(even) {
+			background-color: #FFFFFF;
+		}
+
+		.listado th {
+			background-color: #350133;
+		}
+
+		.listado td:first-child { 
+			color: #FC1231; 
+		}
+
+		.listado tr:hover {
+			background-color: #F7C7F7;
+			-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+			-moz-box-shadow: 0 6px 6px -6px #0E1119;
+			box-shadow: 0 6px 6px -6px #0E1119;
+		}
+
+		td a {
+			color: #4B4A4B;
+		}
+
+		td a:hover {
+			color: #FFFFFF;
+		}
+
+		.listado td.icono1:hover {
+			background-color: yellow;
+			
+			box-shadow: yellow -1px 1px, yellow -2px 2px, yellow -3px 3px, yellow -4px 4px, yellow -5px 5px, yellow -6px 6px;
+			transform: translate3d(6px, -6px, 0);
+
+			transition-delay: 0s;
+			transition-duration: 0.4s;
+			transition-property: all;
+			transition-timing-function: line;
+		}
+		.listado td.icono2:hover {
+			background-color: #FC1231;
+			
+			box-shadow: #BA0F26 -1px 1px, #BA0F26 -2px 2px, #BA0F26 -3px 3px, #BA0F26 -4px 4px, #BA0F26 -5px 5px, #BA0F26 -6px 6px;
+			transform: translate3d(6px, -6px, 0);
+
+			transition-delay: 0s;
+			transition-duration: 0.4s;
+			transition-property: all;
+			transition-timing-function: line;
+		}	
+
+        *{
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Verdana';
+  background:#343a40;
+}
+
+h1{
+  text-align:center;
+  color:orange;
+}
+
+form{
+  width:90%;
+  max-width:578px;
+  margin: auto;
+  color:#f1f3f5;
+}
+
+fieldset{
+  border:1px solid #868e96;
+  border-radius:5px;
+  background:#495057;
+  padding:16px;
+}
+
+label{
+  display:block;
+  margin-bottom: 5px;
+}
+
+legend{
+	color: black;
+}
+
+input, select,textarea{
+  width:100%;
+  color:#495057;
+  margin-bottom: 24px;
+  padding:5px 10px;
+  border:1px solid #BDBDBD;
+  border-radius:5px;
+}
+
+input[type='submit']{
+  display:block;
+  margin:0;
+  width:initial;
+  background:orange;
+  font-size:24px;
+  border:0;
+}
+
+
+
+
+/* ------------------------------------ */
+
+table{
+  border:1px solid;
+  
+/*Es para juntar todos los bordes de las celdas*/
+  border-collapse:collapse;
+}
+
+td,th{
+  border:1px solid;
+/*Agrega espacio*/
+  padding:8px;
+}
+
+
+/*CSS de checkbox*/
+
+
+
+.ondisplay{
+  text-align:center;
+  padding:0;
+}
+
+.ondisplay section{
+  width:75px;
+  height:75px;
+  background: #555;
+  display:inline-block;
+  border: 1px solid gray;
+  text-align: center;
+  margin-top:5px;
+  border-radius:5px;
+  box-shadow: 0 1px 4px
+     rgba(0, 0, 0, 0.3), 0 0 40px
+     rgba(0, 0, 0, 0.1) inset;
+}
+
+.ondisplay section::before {
+  content:'Editar'; 
+  color: #bbb;
+	font: 20px Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	text-shadow: 0px 1px black;
+}
+
+
+
+
+
+
+
+
+/* SQUARED FOUR */
+.squaredFour {
+	width: 20px;	
+	margin: 20px auto;
+	position: relative;
+}
+
+.squaredFour label {
+	cursor: pointer;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 0;
+  left: 0;
+	border-radius: 4px;
+
+	-webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	background: #fcfff4;
+
+	background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+}
+
+.squaredFour label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 9px;
+	height: 5px;
+	background: transparent;
+	top: 4px;
+	left: 4px;
+	border: 3px solid #333;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.squaredFour label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.5;
+}
+
+.squaredFour input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+	
+	
+	
+	
+	

@@ -1,0 +1,97 @@
+<script src="https://use.fontawesome.com/bf66789927.js"></script>
+
+<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+<body>
+    <h1>Listado de Personas</h1>
+     <!--<h1>CSS3 Checkbox Styles</h1>-->
+<div class="ondisplay">
+  
+
+  
+<section>  
+  <!-- Squared FOUR -->
+  <div class="squaredFour">
+  	<input type="checkbox"  (change)="muestra= !muestra" id="squaredFour" name="check" checked />
+	  <label for="squaredFour"></label>
+  </div>
+</section>
+  
+</div>
+		<table class="listado">
+			<thead>
+				<tr>
+					<th><h1>ID</h1></th>
+					<th><h1>Nombre y Apellido</h1></th>
+					<th><h1>Telefono</h1></th>
+          <th><h1>Email</h1></th>
+          <th><h1>Sexo</h1></th>
+          <th><h1>Fecha Ingreso</h1></th>
+          <th><h1>Foto</h1></th>
+          <th><h1>Direccion</h1></th>
+          <th><h1>Localidad</h1></th>
+					<th colspan="2"><h1>Opciones</h1></th>
+				</tr>
+			</thead>
+			<tbody *ngFor="let item of datosClientes">
+				<tr *ngIf="item.sexo=='Femenino'" style="background-color:pink">
+          <td>{{item.id}}</td>
+					<td>{{item.nomApell}}</td>
+					<td>{{item.telefono}}</td>
+					<td >{{item.email}}</td>
+          <td>{{item.sexo}}</td>
+          <td>{{item.fecIngreso}}</td>
+          <td><img src="./assets/fotos/{{item.foto}}" style=" width:80px; height:80px;"> </td>
+          <td>{{item.direccion}}</td>
+          <td>{{item.localidad}}</td>
+					<td class="icono1"><a href="#"><span class="fa glyphicon glyphicon-pencil fa-2x" style="font-size:30px;"></span></a></td>	
+					<td class="icono2"><a (click)="BorrarCliente(item.id)"><span class="fa glyphicon glyphicon-trash fa-2x" style="font-size:30px;"></span></a></td>		
+				</tr>
+        <tr *ngIf="item.sexo!='Femenino'" >
+          <td>{{item.id}}</td>
+					<td>{{item.nomApell}}</td>
+					<td>{{item.telefono}}</td>
+					<td >{{item.email}}</td>
+          <td>{{item.sexo}}</td>
+          <td>{{item.fecIngreso}}</td>
+          <td><img src="./assets/fotos/{{item.foto}}" style=" width:80px; height:80px;"> </td>
+          <td>{{item.direccion}}</td>
+          <td>{{item.localidad}}</td>
+					<td class="icono1" ><a href="#"><span class="fa glyphicon glyphicon-pencil fa-2x" style="font-size:30px;"></span></a></td>	
+					<td class="icono2" ><a (click)="BorrarCliente(item.id)"><span class="fa glyphicon glyphicon-trash fa-2x" style="font-size:30px;"></span></a></td>	
+				</tr>
+				
+			</tbody>
+		</table>
+<div  *ngIf="muestra==true">
+    <h1>Alta de Clientes</h1>
+<form action="" method="">
+  <fieldset >
+    <legend>Datos Personales</legend>
+    <label for="">Nombre y Apellido</label>
+    <input type="text" [(ngModel)]="nomApell" [ngModelOptions]="{standalone: true}">
+    <label for="">Telefono</label>
+    <input type="text" [(ngModel)]="telefono" [ngModelOptions]="{standalone: true}">
+    <label for="">Email</label>
+    <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+    <label for="">Sexo</label>
+    <select name="" id="" [(ngModel)]="sexo" [ngModelOptions]="{standalone: true}">
+      <option value="No especificado" >No especificado</option>
+      <option value="Femenino"  >Femenino</option>
+      <option value="Masculino" >Masculino</option>
+    </select>
+    <label for="">Fecha Ingreso</label>
+    <input type="text" [(ngModel)]="fecIngreso" [ngModelOptions]="{standalone: true}">
+    <label for="">Foto</label>
+    <input type="text" [(ngModel)]="foto" [ngModelOptions]="{standalone: true}">
+    <label for="">Direccion</label>
+    <input type="text" [(ngModel)]="direccion" [ngModelOptions]="{standalone: true}">
+    <label for="">Localidad</label>
+    <input type="text" [(ngModel)]="localidad" [ngModelOptions]="{standalone: true}">
+    <!--<textarea></textarea>-->
+    <input type="submit" value="Enviar" (click)="AgregarCliente()" />
+  </fieldset>
+</form>
+<hr/>
+</div>
+</body>
